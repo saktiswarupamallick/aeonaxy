@@ -1,10 +1,10 @@
-import DemoComponent3 from "./DemoComponent3";
+import DemoComponent4 from "./DemoComponent4";
 
 
 function App() {
   return (
     <div>
-   <DemoComponent3 />
+   <DemoComponent4 />
     </div>
   );
 }

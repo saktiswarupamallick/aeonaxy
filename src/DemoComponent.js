@@ -12,7 +12,7 @@ const options = [
 
 const ProgressBar = ({ progress }) => {
   return (
-    <div className="h-2 bg-green-500" style={{ width: `${progress}%` }}></div>
+    <div className="h-1 bg-green-500 " style={{ width: `${progress}%` }}></div>
   );
 };
 
@@ -42,7 +42,7 @@ const Form = () => {
 
   return (
     <div className="max-w-md mx-auto mt-10 p-4">
-      <ProgressBar progress={progress} />
+      <ProgressBar className="h-1.5" progress={progress} />
       <h1 className="text-xl font-bold mb-2 text-center">Which describes you best?</h1>
       <p className="text-gray-600 mb-4 text-center">
         This will help us personalize your experience.
@@ -58,7 +58,7 @@ const Form = () => {
         ))}
       </div>
       <button
-        className={`py-2 px-4 mt-4 ${
+        className={`py-2 px-4 mt-4 flex items-center justify-center ${
           selectedOption !== null ? 'bg-black text-white' : 'bg-gray-400'
         }`}
         disabled={selectedOption === null}

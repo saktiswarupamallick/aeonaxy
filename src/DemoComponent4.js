@@ -14,14 +14,14 @@ const NextPage = () => {
       subHeading: "Foundational"
     },
     {
-      imgSrc: "/image3.jpg",
-      mainHeading: "Heading 3",
-      subHeading: "Subheading 3"
+      imgSrc: "/quadratic.png",
+      mainHeading: "Intermediate Algebra",
+      subHeading: "Intermediate"
     },
     {
-      imgSrc: "/image4.jpg",
-      mainHeading: "Heading 4",
-      subHeading: "Subheading 4"
+      imgSrc: "/calculus.png",
+      mainHeading: "Calculus",
+      subHeading: "Advanced"
     }
   ];
 
@@ -36,10 +36,14 @@ const NextPage = () => {
       {/* Square Boxes */}
       <div className="flex flex-wrap justify-center gap-4">
         {boxContents.map((box, index) => (
-          <div key={index} className="w-50 bg-white border rounded-lg p-4">
-            <img src={box.imgSrc} alt="Image" className="w-18 h-16 mx-auto mb-2" />
-            <h2 className="text-sm font-bold flex justify-center mb-1">{box.mainHeading}</h2>
-            <p className="text-md flex justify-center text-gray-600">{box.subHeading}</p>
+          <div key={index} className="w-60 h-60 bg-white border rounded-lg p-4 flex flex-col justify-between">
+            <img src={box.imgSrc} alt="Image" className="w-16 h-16 mx-auto mb-2" />
+            <div className="text-sm font-bold flex justify-center">
+              {box.mainHeading}
+            </div>
+            <div className="text-md flex justify-center text-gray-600">
+              {box.subHeading}
+            </div>
           </div>
         ))}
       </div>

@@ -3,40 +3,36 @@ import React, { useState } from 'react';
 const options = [
   {
     id: 1,
-    icon: '/student.png',
-    label: 'Student',
-    description: 'or soon to be enrolled',
+    icon: '/skills.png',
+    label: 'Learning specific skills to advance my career',
+    
   }, {
     id: 2,
-    icon: '/professional.png',
-    label: 'Professional',
-    description: 'pursuing a career',
+    icon: '/explore.png',
+    label: "Exploring new topics I'm interested in",
+    
   },
   {
     id: 3,
-    icon: '/parent.png',
-    label: 'Parent',
-    description: 'of a school-age child',
+    icon: '/math.png',
+    label: 'Refreshing my math foundations',
+ 
   },
 
   {
     id: 4,
-    icon: './learner.png',
-    label: 'Lifelong learner',
+    icon: './exercise.png',
+    label: 'Exercising my brain to stay sharp',
   },
 
   {
     id: 5,
-    icon: '/teacher.png',
-    label: 'Teacher',
-  },
-
-
-  {
-    id: 6,
-    icon: '/other.png',
-    label: 'Other',
+    icon: '/eye.png',
+    label: 'Somryhing else',
   }
+
+
+
 
 
 ];
@@ -73,15 +69,15 @@ const Form = () => {
 
   const handleSelect = (id) => {
     setSelectedOption(id);
-    setProgress(20);
+    setProgress(40);
   };
 
   return (
     <>
-    <div className=" mx-auto mt-10 p-4">
+    <div className=" mx-auto mt-2 p-4">
       <ProgressBar progress={progress} />
     </div>
-    <div className="max-w-xl mx-auto mt-10 p-4">
+    <div className="max-w-xl mx-auto  p-4">
       
       <h1 className="text-xl font-bold mb-2 text-center">Which describes you best?</h1>
       <p className="text-gray-600 mb-10 text-center">

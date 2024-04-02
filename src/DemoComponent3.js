@@ -1,6 +1,13 @@
 import React from 'react';
 
+const ProgressBar = ({ progress }) => {
+    return (
+      <div className="h-1 bg-green-500 w-full mb-6 " style={{ width: `${progress}%` }}></div>
+    );
+  };
+
 const NextPage = () => {
+    
   return (
     <div className="flex flex-col justify-center items-center h-screen overflow-auto">
       {/* Container for Left and Right Sections */}

@@ -58,7 +58,7 @@ const Form = () => {
         ))}
       </div>
       <button
-        className={`py-2 px-4 mt-4 flex items-center justify-center ${
+        className={`py-2 px-4 mt-4 rounded flex items-center justify-center ${
           selectedOption !== null ? 'bg-black text-white' : 'bg-gray-400'
         }`}
         disabled={selectedOption === null}

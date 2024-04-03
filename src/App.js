@@ -1,10 +1,10 @@
-import DemoComponent4 from "./DemoComponent4";
+import Spinner from "./Spinner";
 
 
 function App() {
   return (
     <div>
-   <DemoComponent4 />
+   <Spinner />
     </div>
   );
 }

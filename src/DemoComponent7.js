@@ -19,7 +19,7 @@ const Box = ({ image, heading, subheading }) => {
           ))}
         </div>
       </div>
-      <div><img src={image} alt="Box Image" className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 mb-4" /></div>
+      <div><img src={image} alt="Box Image" className="w-25 h-25 md:w-32 md:h-32 lg:w-40 lg:h-40 mb-4" /></div>
 
 
     </div>
@@ -35,12 +35,12 @@ const Page = () => {
       </div>
       <div className="flex flex-col md:flex-row justify-center md:space-x-4 mt-8">
         <Box
-          image="/parent.png"
+          image="/math7.jpg"
           heading="Foundational Math"
           subheading="Build your foundational..skills in algebra ,geometry,..and probability."
         />
         <Box
-          image="/parent.png"
+          image="/math7.jpg"
           heading="Mathematical Thinking"
           subheading="Build your foundational..skills in algebra ,geometry,..and probability."
         />

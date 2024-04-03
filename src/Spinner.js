@@ -6,11 +6,14 @@ const Loader = () => {
   return (
     <div className="flex flex-col justify-center items-center h-screen">
       <div className="text-center mb-8">
-        <FontAwesomeIcon icon={faSpinner} style={{ color: "#FFD43B" }} spin size="3x" />
-        <h1 className="text-xl font-bold mt-4">Finding learning path recommendation for you based on your response</h1>
+        <FontAwesomeIcon className="mb-8" icon={faSpinner} style={{ color: "#FFD43B" }} spin size="3x" />
+        <h1 className="text-xl font-bold">Finding learning path recommendation for you based on</h1>
+        <h1 className="text-xl font-bold mt-2">your response</h1>
+        
       </div>
     </div>
   );
 };
 
 export default Loader;
+

@@ -1,29 +1,23 @@
-import React, { useState , useEffect } from 'react';
+import React from 'react';
 
 const ProgressBar = ({ progress }) => {
   return (
-    <div className="h-1 bg-green-500 ml-8 mr-8 mb-6 " style={{ width: `${progress}%` }}></div>
+    <div className="h-1 bg-green-500 ml-8 mr-8 mb-6" style={{ width: `${progress}%` }}></div>
   );
 };
 
 const NextPage = () => {
-  const [progress, setProgress] = useState(0);
-  
-  useEffect(() => {
-    setProgress(95);
-  }, []);
-
   return (
     <>
-      <div className="mx-auto mt-2 p-4">
-        <ProgressBar progress={progress} />
-      </div>
-      <div className="flex flex-col justify-center items-center  overflow-auto">
+      <div className="flex flex-col pt-10 justify-center items-center overflow-auto">
+        {/* Progress Bar */}
+        <ProgressBar progress={70} />
+
         {/* Container for Left and Right Sections */}
         <div className="flex flex-col lg:flex-row justify-center items-center w-full max-w-screen-lg">
           {/* Left Section */}
-          <div className="w-full lg:w-1/2 mb-8 lg:mb-0 pr-8"> {/* Added pr-4 for right padding */}
-            <img src="/rightpath.jpg" alt="Your Image" className="w-full" style={{ maxWidth: '700px' }} />
+          <div className="w-full lg:w-1/2 mb-8 lg:mb-0 pr-8">
+            <img src="/cheerful.jpg" alt="Your Image" className="w-full" style={{ maxWidth: '700px' }} />
           </div>
           {/* Right Section */}
           <div className="w-full lg:w-1/2 px-8">
@@ -39,7 +33,7 @@ const NextPage = () => {
             {/* Quote */}
             <p className="italic text-center text-sm md:text-base mb-4">"Mathematics is not just about numbers and equations; it's about understanding patterns, uncovering hidden truths, and exploring the beauty of logic in the universe."</p>
             {/* Author */}
-            <p className="italic">-jacob S.</p>
+            <p className="italic">- Jacob S.</p>
           </div>
         </div>
         {/* Button */}

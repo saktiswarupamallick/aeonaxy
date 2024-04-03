@@ -58,6 +58,7 @@ const Option = ({ option, onSelect }) => {
 
       <div className="flex flex-row ">
         <p className="font-bold ">{option.label}</p>
+      
         <p> {option.description}</p>
       </div>
     </div>
@@ -79,7 +80,7 @@ const Form = () => {
     <div className=" mx-auto mt-2 p-4">
       <ProgressBar progress={progress} />
     </div>
-      <div className="mx-auto mt-10 p-4 max-w-md">
+      <div className="mx-auto mt-10 p-4 max-w-lg">
        
         <h1 className="text-xl font-bold mb-2 text-center">Which describes you best?</h1>
         <p className="text-gray-600 mb-10 text-center">This will help us personalize your experience.</p>

@@ -39,7 +39,7 @@ const NextPage = () => {
             {/* Quote */}
             <p className="italic text-center text-sm md:text-base mb-4">"A quote of 34 words in italics within double quotes"</p>
             {/* Author */}
-            <p className="text-center">Author Name</p>
+            <p className="italics">Author Name</p>
           </div>
         </div>
         {/* Button */}

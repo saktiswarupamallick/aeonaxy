@@ -15,7 +15,7 @@ const NextPage = () => {
         <div className="flex items-center bg-white border rounded-lg p-4">
           <div className="w-1/2">
             <h2 className="text-lg font-bold mb-1">Box 1 Main Heading</h2>
-            <p className="text-md text-gray-600">Box 1 Subheading</p>
+            <p className="text-md text-gray-600">Build your foundational skills in algebra ,geometry,and probability</p>
           </div>
           <div className="w-1/2">
             <img src="/image1.jpg" alt="Image 1" className="w-full h-auto" />
@@ -25,8 +25,8 @@ const NextPage = () => {
         {/* Box 2 */}
         <div className="flex items-center bg-white border rounded-lg p-4">
           <div className="w-1/2">
-            <h2 className="text-lg font-bold mb-1">Box 2 Main Heading</h2>
-            <p className="text-md text-gray-600">Box 2 Subheading</p>
+            <h2 className="text-md font-bold mb-1">Mathematical Thinking</h2>
+            <p className="text-md text-gray-600">Build your foundational skills in algebra ,geometry,and probability</p>
           </div>
           <div className="w-1/2">
             <img src="/image2.jpg" alt="Image 2" className="w-full h-auto" />

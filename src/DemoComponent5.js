@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ProgressBar = ({ progress }) => {
   return (
@@ -7,6 +8,14 @@ const ProgressBar = ({ progress }) => {
 };
 
 const DemoComponent5 = () => {
+   const navigate = useNavigate();
+
+  const handleContinue = () => {
+   
+    navigate("/spinner");
+  };
+
+
   return (
     <>
       <div className="flex flex-col pt-10 justify-center items-center overflow-auto">
@@ -17,7 +26,7 @@ const DemoComponent5 = () => {
         <div className="flex flex-col lg:flex-row justify-center items-center w-full max-w-screen-lg">
           {/* Left Section */}
           <div className="w-full lg:w-1/2 mb-8 lg:mb-0 pr-8">
-            <img src="/cheerful.jpg" alt="Your Image" className="w-full" style={{ maxWidth: '700px' }} />
+            <img src="/cheerful.jpg" alt="Your " className="w-full" style={{ maxWidth: '700px' }} />
           </div>
           {/* Right Section */}
           <div className="w-full lg:w-1/2 px-8">
@@ -38,7 +47,7 @@ const DemoComponent5 = () => {
         </div>
         {/* Button */}
         <div className="flex justify-center">
-          <button className="py-3 px-6 bg-gray-800 text-white rounded mt-8">Continue</button>
+          <button onClick={handleContinue} className="py-3 px-6 bg-black text-white rounded mt-8">Continue</button>
         </div>
       </div>
     </>

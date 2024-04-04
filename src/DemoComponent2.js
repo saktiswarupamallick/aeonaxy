@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const options = [
@@ -37,7 +37,7 @@ const options = [
 
 const ProgressBar = ({ progress }) => {
   return (
-    <div className="h-1 bg-green-500 w-full mb-6 " style={{ width: `${progress}%` }}></div>
+    <div className="h-1 bg-green-500 mb-6 " style={{ width: `${progress}%` }}></div>
   );
 };
 
@@ -64,6 +64,10 @@ const Option = ({ option, onSelect }) => {
 const DemoComponent2 = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [progress, setProgress] = useState(0);
+  useEffect(() => {
+
+    setProgress(40);
+  }, []);
   const navigate = useNavigate();
 
   const handleSelect = (id) => {
@@ -77,14 +81,15 @@ const DemoComponent2 = () => {
 
   return (
     <>
-    <div className=" mx-auto mt-2 p-4">
+    <div className=" mx-auto mt-2 p-4 flex flex-row">
+    
       <ProgressBar progress={progress} />
     </div>
     <div className="max-w-xl mx-auto  p-4">
       
-      <h1 className="text-xl font-bold mb-2 text-center">Which describes you best?</h1>
-      <p className="text-gray-600 mb-10 text-center">
-        This will help us personalize your experience.
+      <h1 className="text-xl font-bold mb-2 text-center">Which are you most interested in?</h1>
+      <p className="text-gray-600 mb-10 text-sm text-center">
+        Choose just one. This will help us get you started
       </p>
       <div className="space-y-4">
         {options.map((option) => (
@@ -98,7 +103,7 @@ const DemoComponent2 = () => {
       </div>
       <div className="flex justify-center">
         <button
-          className={`py-2 px-10 rounded mt-4 ${selectedOption !== null ? 'bg-black text-white' : 'bg-gray-400'
+          className={`py-2 px-10 rounded mt-4 ${selectedOption !== null ? 'bg-black text-white' : 'bg-gray-200 text-white'
             }`}
           disabled={selectedOption === null}
           onClick={handleContinue}

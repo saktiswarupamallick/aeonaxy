@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
+import { useNavigate } from 'react-router-dom'; 
 
 const Spinner = () => {
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate(); 
   const [showSpinner, setShowSpinner] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSpinner(false);
       navigate('./Democomponent7'); // Redirect after 6 seconds
-    }, 6000);
+    }, 4000);
 
     return () => clearTimeout(timer); // Clear the timer on component unmount
   }, [navigate]);

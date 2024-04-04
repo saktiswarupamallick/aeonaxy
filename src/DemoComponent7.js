@@ -10,7 +10,7 @@ const SubHeading = ({ children }) => {
 
 const DemoComponent7 = ({ image, heading, subheading, isPopular }) => {
   return (
-    <div className="relative mt-8 mx-6 p-4 border border-gray-300 rounded-lg">
+    <div className="relative mt-12 mx-6 p-4 border border-gray-300 rounded-lg">
       <div className="flex flex-row-inverse justify-center items-center relative">
         {isPopular && (
           <div className="absolute top-0 transform -translate-y-full bg-yellow-500 text-black py-1 px-4 rounded-full text-xs font-bold">
@@ -26,7 +26,7 @@ const DemoComponent7 = ({ image, heading, subheading, isPopular }) => {
           </div>
         </div>
         <div>
-          <img src={image} alt="DemoComponent7 Image" className="w-25 h-25 md:w-32 md:h-32 lg:w-40 lg:h-40 mb-4" />
+          <img src={image} alt="DemoComponent7 " className="w-25 h-25 md:w-32 md:h-32 lg:w-40 lg:h-40 mb-4" />
         </div>
       </div>
     </div>

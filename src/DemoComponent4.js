@@ -36,7 +36,7 @@ const NextPage = () => {
       {/* Square Boxes */}
       <div className="flex flex-wrap justify-center gap-4">
         {boxContents.map((box, index) => (
-          <div key={index} className="w-60 h-60 bg-white border rounded-lg p-4 flex flex-col justify-between">
+          <div key={index} className="w-50 h-50 bg-white border rounded-lg p-4 flex flex-col justify-between">
             <img src={box.imgSrc} alt="Image" className="w-16 h-16 mx-auto mb-2" />
             <div className="text-sm font-bold flex justify-center">
               {box.mainHeading}

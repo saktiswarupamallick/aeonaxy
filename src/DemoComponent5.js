@@ -6,7 +6,7 @@ const ProgressBar = ({ progress }) => {
   );
 };
 
-const NextPage = () => {
+const DemoComponent5 = () => {
   return (
     <>
       <div className="flex flex-col pt-10 justify-center items-center overflow-auto">
@@ -45,4 +45,4 @@ const NextPage = () => {
   );
 };
 
-export default NextPage;
+export default DemoComponent5;

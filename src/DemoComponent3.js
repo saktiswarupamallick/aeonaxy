@@ -7,7 +7,7 @@ const ProgressBar = ({ progress }) => {
   );
 };
 
-const NextPage = () => {
+const DemoComponent3 = () => {
   const [progress, setProgress] = useState(0);
   useEffect(() => {
 
@@ -46,4 +46,4 @@ const NextPage = () => {
   );
 };
 
-export default NextPage;
+export default DemoComponent3;

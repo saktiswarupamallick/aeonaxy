@@ -64,7 +64,7 @@ const Option = ({ option, onSelect }) => {
 };
 
 
-const Form = () => {
+const DemoComponent2 = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [progress, setProgress] = useState(0);
   const navigate = useNavigate();
@@ -114,4 +114,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default DemoComponent2;

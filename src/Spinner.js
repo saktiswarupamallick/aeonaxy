@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
-const Loader = () => {
+const Spinner = () => {
   return (
     <div className="flex flex-col justify-center items-center h-screen">
       <div className="text-center mb-8">
@@ -15,5 +15,5 @@ const Loader = () => {
   );
 };
 
-export default Loader;
+export default Spinner;
 

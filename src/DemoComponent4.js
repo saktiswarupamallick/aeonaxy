@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function BoxGrid() {
+function DemoComponent4() {
     const [progress, setProgress] = useState(0);
 
     const handleClick = () => {
@@ -57,4 +57,6 @@ function BoxGrid() {
     );
 }
 
-export default BoxGrid;
+export default DemoComponent4;
+
+  {/* sorry i tried but i  was not able to find good photos so i went with these  */}

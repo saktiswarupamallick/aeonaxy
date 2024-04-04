@@ -10,26 +10,30 @@ const SubHeading = ({ children }) => {
 
 const Box = ({ image, heading, subheading, isPopular }) => {
   return (
-    <div className="relative flex mt-8 mx-6 flex-row-inverse justify-center items-center p-4 border border-gray-300 rounded-lg">
-      {isPopular && (
-        <div className="absolute top-0 right-0 bg-yellow-500 text-black py-1 px-4 rounded-tr-lg rounded-bl-lg text-xs font-bold">
-          Most Popular
+    <div className="relative mt-8 mx-6 p-4 border border-gray-300 rounded-lg">
+      <div className="flex flex-row-inverse justify-center items-center relative">
+        {isPopular && (
+          <div className="absolute top-0 transform -translate-y-full bg-yellow-500 text-black py-1 px-4 rounded-full text-xs font-bold">
+            Most Popular
+          </div>
+        )}
+        <div>
+          <h3 className="text-lg md:text-lg font-bold">{heading}</h3>
+          <div className="text-lg md:text-base">
+            {subheading.split('..').map((part, index) => (
+              <p key={index} className="mb-1">{part}</p>
+            ))}
+          </div>
         </div>
-      )}
-      <div>
-        <h3 className="text-lg md:text-lg font-bold">{heading}</h3>
-        <div className="text-lg md:text-base">
-          {subheading.split('..').map((part, index) => (
-            <p key={index} className="mb-1">{part}</p>
-          ))}
+        <div>
+          <img src={image} alt="Box Image" className="w-25 h-25 md:w-32 md:h-32 lg:w-40 lg:h-40 mb-4" />
         </div>
-      </div>
-      <div>
-        <img src={image} alt="Box Image" className="w-25 h-25 md:w-32 md:h-32 lg:w-40 lg:h-40 mb-4" />
       </div>
     </div>
   );
 };
+
+
 
 const Page = () => {
   return (
@@ -40,6 +44,7 @@ const Page = () => {
       </div>
       <div className="flex flex-col md:flex-row justify-center md:space-x-4 mt-8">
         <Box
+         isPopular={true}
           image="/math7.jpg"
           heading="Foundational Math"
           subheading="Build your foundational..skills in algebra ,geometry,..and probability."

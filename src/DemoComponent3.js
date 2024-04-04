@@ -13,10 +13,10 @@ const NextPage = () => {
 
     setProgress(60);
   }, []);
-
+  const navigate = useNavigate();
   const handleContinue = () => {
 
-    navigate("/DemoComponent2");
+    navigate("/DemoComponent4");
   };
 
   return (
@@ -39,7 +39,7 @@ const NextPage = () => {
         </div>
         {/* Button */}
         <div className="flex justify-center">
-          <button className="py-3 px-6 bg-gray-800 text-white rounded mt-8">Continue</button>
+          <button  onClick={handleContinue} className="py-3 px-6 bg-gray-800 text-white rounded mt-8">Continue</button>
         </div>
       </div>
     </>

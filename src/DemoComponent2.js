@@ -33,9 +33,6 @@ const options = [
   }
 
 
-
-
-
 ];
 
 const ProgressBar = ({ progress }) => {

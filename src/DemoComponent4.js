@@ -1,21 +1,36 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+const ProgressBar = ({ progress }) => {
+    return (
+        <div className="h-1 bg-green-500 w-full mb-6" style={{ width: `${progress}%` }}></div>
+    );
+};
+
 
 function DemoComponent4() {
     const [progress, setProgress] = useState(0);
+    const [optionClicked, setOptionClicked] = useState(false); 
+    const navigate = useNavigate();
 
     const handleClick = () => {
-        // Update progress to 80 when someone clicks on any option box
+        setOptionClicked(true);
         setProgress(80);
     };
+
+    const handleContinue = () => {
+   
+        navigate("/DemoComponent5");
+      };
 
     return (
         <section>
             <div className=" mx-auto mt-2 p-4">
-            <progress className="w-full mb-4" value={progress} max="100" style={{height: '5px', backgroundColor: 'green' }} />
+                <ProgressBar className="w-full mb-4" progress={progress} max="100" style={{ height: '5px', backgroundColor: 'green' }} />
             </div>
             <div className="py-16">
                 <div className="mx-auto px-6 max-w-6xl">
-                    
+
                     <h1 className="text-3xl text-center text-gray-900 dark:text-white font-semibold">What is your math comfort level?</h1>
                     <p className="text-center mt-2 text-gray-600 dark:text-gray-300">Choose the highest level you feel confident in -you can always adjust later</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-6">
@@ -49,7 +64,9 @@ function DemoComponent4() {
                         </div>
                     </div>
                     <div className="flex justify-center mt-8">
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Continue</button>
+                        <button  onClick={handleContinue} className={`font-bold py-2 px-4 rounded ${optionClicked ? 'bg-black text-white' : 'bg-gray-500 text-gray-900'}`}>
+                            Continue
+                        </button>
                     </div>
                 </div>
             </div>
@@ -59,4 +76,4 @@ function DemoComponent4() {
 
 export default DemoComponent4;
 
-  {/* sorry i tried but i  was not able to find good photos so i went with these  */}
+{/* sorry i tried but i  was not able to find good photos so i went with these  */ }

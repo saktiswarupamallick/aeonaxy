@@ -11,7 +11,7 @@ function BoxGrid() {
     return (
         <section>
             <div className=" mx-auto mt-2 p-4">
-            <progress className="w-full mb-4" value={progress} max="100" h-1 style={{height: '5px', backgroundColor: 'green' }} />
+            <progress className="w-full mb-4" value={progress} max="100" style={{height: '5px', backgroundColor: 'green' }} />
             </div>
             <div className="py-16">
                 <div className="mx-auto px-6 max-w-6xl">

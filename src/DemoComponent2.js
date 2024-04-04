@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const options = [
   {
@@ -66,10 +67,15 @@ const Option = ({ option, onSelect }) => {
 const Form = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [progress, setProgress] = useState(0);
+  const navigate = useNavigate();
 
   const handleSelect = (id) => {
     setSelectedOption(id);
     setProgress(40);
+  };
+  const handleContinue = () => {
+   
+    navigate("/DemoComponent3");
   };
 
   return (
@@ -98,6 +104,7 @@ const Form = () => {
           className={`py-2 px-10 rounded mt-4 ${selectedOption !== null ? 'bg-black text-white' : 'bg-gray-400'
             }`}
           disabled={selectedOption === null}
+          onClick={handleContinue}
         >
           Continue
         </button>

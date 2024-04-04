@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const options = [
   {
@@ -49,7 +50,7 @@ const Option = ({ option, onSelect }) => {
 
   return (
     <div
-      className={`flex items-center space-x-2 p-4 border rounded cursor-pointer transition duration-300 ${hovered ? 'border-yellow-300 shadow-md bg-white' : 'border-gray-300 hover:border-yellow-300 hover:bg-white'}`}
+      className={`flex items-center space-x-2 p-2 border rounded cursor-pointer transition duration-300 ${hovered ? 'border-yellow-300 shadow-md bg-white' : 'border-gray-300 hover:border-yellow-300 hover:bg-white'}`}
       onClick={() => onSelect(option.id)}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -57,7 +58,7 @@ const Option = ({ option, onSelect }) => {
       <img src={option.icon} alt={option.label} className="w-6 h-8" />
 
       <div className="flex flex-row ">
-        <p className="font-bold ">{option.label}</p>
+        <p className="font-bold pr-2">{option.label}</p>
       
         <p> {option.description}</p>
       </div>
@@ -69,10 +70,16 @@ const Option = ({ option, onSelect }) => {
 const Form = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [progress, setProgress] = useState(0);
+  const navigate = useNavigate();
 
   const handleSelect = (id) => {
     setSelectedOption(id);
     setProgress(20);
+  };
+
+  const handleContinue = () => {
+   
+    navigate("/DemoComponent2");
   };
 
   return (
@@ -99,6 +106,7 @@ const Form = () => {
             className={`py-2 px-10 rounded mt-4 ${selectedOption !== null ? 'bg-black text-white' : 'bg-gray-400'
               }`}
             disabled={selectedOption === null}
+            onClick={handleContinue}
           >
             Continue
           </button>

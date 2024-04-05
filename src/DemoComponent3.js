@@ -28,7 +28,7 @@ const DemoComponent3 = () => {
         {/* Container for Left and Right Sections */}
         <div className="flex flex-col lg:flex-row justify-center items-center w-full max-w-screen-lg">
           {/* Left Section */}
-          <div className="w-full lg:w-1/2 mb-8 lg:mb-0 pr-8"> {/* Added pr-4 for right padding */}
+          <div className="w-full lg:w-1/2 mb-8 lg:mb-0 pr-8"> 
             <img src="/rightpath.jpg" alt="Your " className="w-full" style={{ maxWidth: '700px' }} />
           </div>
           {/* Right Section */}

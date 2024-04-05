@@ -18,18 +18,18 @@ const DemoComponent5 = () => {
 
   return (
     <>
-      <div className="flex flex-col pt-10 justify-center items-center overflow-auto">
-        {/* Progress Bar */}
-        <ProgressBar progress={70} />
-
-        {/* Container for Left and Right Sections */}
-        <div className="flex flex-col lg:flex-row justify-center items-center w-full max-w-screen-lg">
-          {/* Left Section */}
-          <div className="w-full lg:w-1/2 mb-8 lg:mb-0 pr-8">
-            <img src="/cheerful.jpg" alt="Your " className="w-full" style={{ maxWidth: '700px' }} />
-          </div>
-          {/* Right Section */}
-          <div className="w-full lg:w-1/2 px-8">
+    <div className=" mx-auto mt-2 p-4">
+      <ProgressBar progress={70} />
+    </div>
+    <div className="flex flex-col justify-center items-center h-screen overflow-auto">
+      {/* Container for Left and Right Sections */}
+      <div className="flex flex-col lg:flex-row justify-center items-center w-full max-w-screen-lg">
+        {/* Left Section */}
+        <div className="w-full lg:w-1/2 mb-8 lg:mb-0 pr-8"> 
+          <img src="/cheerful.jpg" alt="Your " className="w-full" style={{ maxWidth: '700px' }} />
+        </div>
+        {/* Right Section */}
+        <div className="w-full lg:w-1/2 px-8">
             <h1 className="text-3xl lg:text-4xl font-bold mb-4">You're on your way</h1>
             {/* 5 Star SVG */}
             <div className="flex mt-10 justify-start">
@@ -45,12 +45,12 @@ const DemoComponent5 = () => {
             <p className="italic">- Jacob S.</p>
           </div>
         </div>
-        {/* Button */}
-        <div className="flex justify-center">
-          <button onClick={handleContinue} className="py-3 px-6 bg-black text-white rounded mt-8">Continue</button>
-        </div>
+      {/* Button */}
+      <div className="flex justify-center">
+        <button  onClick={handleContinue} className="py-3 px-6 bg-gray-800 text-white rounded mt-8">Continue</button>
       </div>
-    </>
+    </div>
+  </>
   );
 };
 

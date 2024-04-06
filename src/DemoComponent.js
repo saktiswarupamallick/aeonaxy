@@ -50,7 +50,7 @@ const Option = ({ option, onSelect }) => {
 
   return (
     <div
-      className={`flex items-center py-2 space-x-2 p-2 border rounded cursor-pointer transition duration-300 ${hovered ? 'border-yellow-300 shadow-md bg-white' : 'border-gray-300 hover:border-yellow-300 hover:bg-white'}`}
+      className={`flex items-center py-4 space-x-2 p-2 border rounded cursor-pointer transition duration-300 ${hovered ? 'border-yellow-300 shadow-md bg-white' : 'border-gray-300 hover:border-yellow-300 hover:bg-white'}`}
       onClick={() => onSelect(option.id)}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
